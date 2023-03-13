@@ -1,0 +1,23 @@
+#list{
+    background-color: white;
+    margin: 30px 10px;
+    border-color: black;
+    opacity: 0.4;
+}
+
+#nome{
+    display: inline;
+    margin: 20px 27px;
+    font-weight: bold;
+    font-family: 'Great Vibes', cursive;
+    font-size: 39px;
+}
+
+.p{
+    border-radius: 3%;
+}
+
+.pMenu{
+    color:white;
+    font-size:17px;
+}

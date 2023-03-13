@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Car dealership</title>
+    <link href="css/supercar.css" type="text/css" rel="stylesheet" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD"
+      crossorigin="anonymous"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0"
+    />
+    
+  </head>
+
+  <body>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- START navbar-->
+
+    <div
+      class="row"
+      style="
+        height: 90px;
+        position: fixed;
+        top: 0;
+        width: 101.5%;
+        background: linear-gradient(#26ffd6, #00614f);
+      "
+    >
+      <!-- START list-->
+      <div class="col">
+        <button
+          id="list"
+          class="btn btn-primary"
+          type="button"
+          data-bs-toggle="offcanvas"
+          data-bs-target="#offcanvasWithBothOptions"
+          aria-controls="offcanvasWithBothOptions"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 16 16"
+            width="16"
+            height="16"
+          >
+            <path
+              d="M1 2.75A.75.75 0 0 1 1.75 2h12.5a.75.75 0 0 1 0 1.5H1.75A.75.75 0 0 1 1 2.75Zm0 5A.75.75 0 0 1 1.75 7h12.5a.75.75 0 0 1 0 1.5H1.75A.75.75 0 0 1 1 7.75ZM1.75 12h12.5a.75.75 0 0 1 0 1.5H1.75a.75.75 0 0 1 0-1.5Z"
+            ></path>
+          </svg>
+        </button>
+
+        <div
+          class="offcanvas offcanvas-start"
+          data-bs-scroll="true"
+          tabindex="-1"
+          id="offcanvasWithBothOptions"
+          aria-labelledby="offcanvasWithBothOptionsLabel"
+          style="background-color: black"
+        >
+          <div class="offcanvas-header">
+            <h5
+              class="offcanvas-title"
+              id="offcanvasWithBothOptionsLabel"
+              style="color: white"
+            >
+              Menù
+            </h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="offcanvas"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="offcanvas-body">
+            <p class="pMenu" id="bmwS" onclick="cambiaPagina(this.id);" onmouseover="trigger(this.id);" onmouseout="triggerOut(this.id);">BMW</p>
+            <hr style="color: #00614f" />
+
+            <p class="pMenu" id="porscheS" onclick="cambiaPagina(this.id);" onmouseover="trigger(this.id);" onmouseout="triggerOut(this.id);">Porsche</p>
+            <hr style="color: #00614f" />
+
+            <p class="pMenu" id="mercedesS" onclick="cambiaPagina(this.id);" onmouseover="trigger(this.id);" onmouseout="triggerOut(this.id);">Mercedes</p>
+            <hr style="color: #00614f" />
+
+            <p class="pMenu" id="alfaromeoS" onclick="cambiaPagina(this.id);" onmouseover="trigger(this.id);" onmouseout="triggerOut(this.id);">Alfa Romeo</p>
+            <hr style="color: #00614f" />
+          </div>
+        </div>
+      </div>
+      <!-- END list-->
+
+      <!-- START logo/nome-->
+
+      <div class="col" style="display: flex; justify-content: center">
+        <img
+          src="https://static.vecteezy.com/system/resources/previews/013/923/537/original/red-car-vehicle-auto-detailing-logo-png.png"
+          style="width: 116px; height: 98px"
+        />
+        <p id="nome">SuperCar Dealership</p>
+      </div>
+      <!-- END logo/nome-->
+
+      <!-- START search-->
+      <div class="col">
+        <form
+          class="d-flex"
+          role="search"
+          style="justify-content: center; margin-top: 29px"
+        >
+          <input
+            class="form-control me-2"
+            type="search"
+            placeholder="Cerca..."
+            aria-label="Search"
+            style="width: 300px"
+          />
+          <button
+            class="btn btn-outline-success"
+            type="submit"
+            style="background-color: black"
+          >
+            Cerca
+          </button>
+        </form>
+      </div>
+      <!-- END search-->
+    </div>
+    <!-- END navbar-->
+
+    <!-- START main-->
+
+    <!-- START 1. ROW-->
+
+    <div class="row" style="margin-top: 276px; margin-left: 136px">
+
+      <!-- 1. div-->
+
+      <div class="col">
+        <div   
+          class="p si"  
+          style="border: 1px solid black; width: 300px; height: 400px"
+        >
+          <h2 style="text-align: center; margin-top: 22px">BMW M4 Coupè</h2>
+          <img  
+            src="https://prod.cosy.bmw.cloud/bmwweb/cosySec?COSY-EU-100-7331cqgv2Z7d%25i02uCaY3MuO2kOHUtWPfbYf0jka10tLhu1XzWVo7puMLWFmdkAj5DOPEtpsZ8XgY1nTNIowJ4HO3zkyXq%25sGM8snGhMQSk%2508Xc9Vo74gA6%25NF1VgxNJ0%25ls2oub5imC2yRCzXeTt%25ViPRKVZVYpwQWh1DMztIAzeqVYDafaOxjmztYRSRgL67aftxdxUew1RSfWQlSD%25VxdSeZsbtuzWQdjc0X73aeZQ6KAnkXRjcZwBO5zrx6Kc%252yu84WwBKupCVJFe%252B3iEzxIjup2XH5pcv63iprJ8i0GwXHi4TPaC9%25rJHFlMgPou4TJIsDVvL3FlTv0JkCyXIslGATO%25Crv0s9Ol8FE4GA0ogsPoNF9OALU0M7kIogOybMDCnvLUgChDYF5GybUEqYtB89ChbNmtjIPoEqhk7f6YMLNmqn1SuwDyk7m5VdKIYCn178zQgQtE5V1Pa8ZmfN8zVMRPsMSkPazDxM77dnMRaYWD0QQ5DxRteYCfZ8YWxfjxvgcPteWS6WGgKMfjedwe28BDFjTgH%25ekxh06FXRTaDWZbQmStyl"
+            style="width: 325px; margin-top: 29px"
+          />
+          <p style="font-size: 22px; margin-top: 48px; margin-left: 25px">
+            A partire da 101.000,00 €
+          </p>
+        </div>
+      </div>
+
+      <!-- 2. div-->
+
+      <div class="col">
+        <div
+          class="p si"
+          style="border: 1px solid black; width: 300px; height: 400px"
+        >
+          <h2 style="text-align: center; margin-top: 22px">Porsche 911</h2>
+          <img 
+            src="https://nav.porsche.com/00BC524/frontshot-assets/1920/911.jpg"
+            style="width: 292px; margin-top: 64px"
+          />
+          <p style="font-size: 22px; margin-top: 43px; margin-left: 25px">
+            A partire da 118.000,00 €
+          </p>
+        </div>
+      </div>
+
+      <!-- 3. div-->
+
+      <div class="col">
+        <div 
+          class="p si"
+          style="border: 1px solid black; width: 300px; height: 400px"
+        >
+          <h2 style="text-align: center; margin-top: 22px">
+            Mercedes-AMG GT 4 Porte Coupè
+          </h2>
+          <img 
+            src="https://assets.oneweb.mercedes-benz.com/iris/iris.jpg?COSY-EU-100-1713d0VXqNWFqtyO67PobzIr3eWsrrCsdRRzwQZg9pZbMw3SGtGyStsd2HdcUfpOyXGEjy2J0lV0VOB2qWcbApUkCI5uLoxQC3aMrkzNHzxm7j06mhKVBYF%25vqAujyLR5QyYaxCrJrH1zgdn8w7PcoiZKeNM4FsIPTg9Ukm6tTnuNpRKhKV0%25F%25vqGugyLRKnXYax2j9rH18Bin8wiT2oiZ4%251M4FgTwTg735wrcldu63eSGwUl9Q6DF1ssfjcVWyDVS%25qjuauQFQ0ZzKG1BZeEsVnDV&imgt=P27&bkgnd=9&pov=BE040&uni=cs&im=Crop,rect=(0,-25,1370,770),gravity=Center;Resize,width=300"
+            style="width: 265px; margin-top: 11px; margin-left: 9px"
+          />
+          <p style="font-size: 22px; margin-top: 70px; margin-left: 25px">
+            A partire da 115.500,00 €
+          </p>
+        </div>
+      </div>
+
+      <!-- 4. div-->
+
+      <div class="col">
+        <div
+          class="p si"
+          style="border: 1px solid black; width: 300px; height: 400px"
+        >
+          <h2 style="text-align: center; margin-top: 22px">
+            Giulia Quadrifoglio
+          </h2>
+          <img 
+            src="https://www.alfaromeo.it/content/dam/alfa/cross/header/modelli/AR-Menu-GIULIA-MCA-TI.png"
+            style="width: 283px; margin-top: 85px; margin-left: 8px"
+          />
+          <p style="font-size: 22px; margin-top: 65px; margin-left: 33px">
+            A partire da 99.000,00 €
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- END 1. ROW-->
+
+    <!-- START 2. ROW-->
+
+    <div class="row" style="margin-top: 163px; margin-left: 136px">
+
+      <!-- 1. div-->
+
+      <div class="col">
+        <div
+          class="p si"
+          style="border: 1px solid black; width: 300px; height: 400px"
+        >
+          <h2 style="text-align: center; margin-top: 22px">Porsche 718</h2>
+          <img 
+            src="https://nav.porsche.com/00BC524/frontshot-assets/1920/718.jpg"
+            style="width: 292px; margin-top: 59px"
+          />
+          <p style="font-size: 22px; margin-top: 48px; margin-left: 25px">
+            A partire da 65.000,00 €
+          </p>
+        </div>
+      </div>
+
+      <!-- 2. div-->
+
+      <div class="col">
+        <div
+          class="p si"
+          style="border: 1px solid black; width: 300px; height: 400px"
+        >
+          <h2 style="text-align: center; margin-top: 22px">
+            Mercedes CLA Coupè
+          </h2>
+          <img 
+            src="https://assets.oneweb.mercedes-benz.com/bbd/images/v1/5513/9/2d/187b5254540ba13f3fce80b8e0fb7d98d702a.png?im=Crop,rect=(70,35,460,260);Resize,width=300"
+            style="width: 292px; margin-top: 1px"
+          />
+          <p style="font-size: 22px; margin-top: 66px; margin-left: 30px">
+            A partire da 35.000,00 €
+          </p>
+        </div>
+      </div>
+
+      <!-- 3. div-->
+
+      <div class="col">
+        <div
+          class="p si"
+          style="border: 1px solid black; width: 300px; height: 400px"
+        >
+          <h2 style="text-align: center; margin-top: 22px">
+            BMW M8 Gran Coupè
+          </h2>
+          <img 
+            src="https://prod.cosy.bmw.cloud/bmwweb/cosySec?COSY-EU-100-7331cqgv2Z7d%25i02uCaY3MuO2kOHUtWPfbYfyn1l10tLhu1XzWVo7puMLWFmdkAj5DOPff2%25Z8XgY1nTNIowJ4HO3zkyXq%25sGM8snGhMQSk%2508Xc9Vo74gk7wNF1VgxNJ0%25ls2oub5imC2yRCzXeTt%25ViPRKVZVYV05Wh1DMztzA%25eqVYDafHJ9jmztYRSJOM67aftxdT%25hw1RSfWQlEC%25VxdSeZG4NuzWQdjc9NR3aeZQ6KownXRjcZwBL%25mrx6Kc%252yVy4WwBKupCVRFe%252B3inPIIjup2XH5Mmv63iprJ84KGwXHi4TPFo9%25rJHFlMRLou4TJIsDxIL3FlTv0YbDyXIslGAtyJCrv0s9OfCQE4GA0ogSxZNF9OALU0bnkIogOybADynvLUgChOYU5GybUEqgtc89ChbNmUFnPoEqhk7ffUMLNmqn1SrGDyk7m5VdQ8YCn178zQZLtE5V1PaZcTfN8zVMRcXQSkPazDxKrCdnMRaYWBjwQ5DxRte2vFZ8YWxfjpTCcPteWS6i1iKMfjedwSbdBDS6jQ%25dxx2Ydw6ZuQhCptQ%25wc3Z8SifZu%25KXcP6HSc3uBrKM2JdKX324BDiTQLXg7AF3D%25zhrLGwg6QuiVpRBc5U"
+            style="width: 329px; margin-top: -9px; margin-left: 3px"
+          />
+          <p style="font-size: 22px; margin-top: 45px; margin-left: 28px">
+            A partire da 185.500,00 €
+          </p>
+        </div>
+      </div>
+
+      <!-- 4. div-->
+
+      <div class="col">
+        <div
+          class="p si"
+          style="border: 1px solid black; width: 300px; height: 400px"
+        >
+          <h2 style="text-align: center; margin-top: 22px">
+            BMW M3 Touring Competition
+          </h2>
+          <img
+            src="https://prod.cosy.bmw.cloud/bmwweb/cosySec?COSY-EU-100-7331cqgv2Z7d%25i02uCaY3MuO2kOHUtWPfbYf0jsd10tLhu1XzWVo7puMLWFmdkAj5DOPFtuOZ8XgY1nTNIowJ4HO3zkyXq%25sGM8snGhMQSk%2508Xc9Vo74g47qNF1VgxNJ0%25ls2oub5imC2yRCzXeTt%25ViPRKVZVYV0GWh1DMztzr5eqVYDafHS6jmztYRSJyL67aftxdIXCw1RSfWQvC0%25VxdSeZGjNuzWQdjc9qO3aeZQ6Kom6XRjcZwBL7zrx6Kc%252N5F4WwBKupk3QFe%252B3in2ZIjup2XH5VXv63iprJ8OWGwXHi4TPO89%25rJHFlMWFou4TJIsD8pL3FlTv0YPiyXIslGAT5tCrv0s9Ol%259E4GA0ogsuyNF9OALUPclkIogOybMwrnvLUgChDu85GybUEqYeF89ChbNmtwjPoEqhk7f0fMLNmqn1kHnDyk7m5VnbbYCn178z5GPtE61cHQa7Gql2V6WhcbEmMTP05k4K"
+            style="width: 324px; margin-top: 0px; margin-left: 2px"
+          />
+          <p style="font-size: 22px; margin-top: 39px; margin-left: 32px">
+            A partire da 114.000,00 €
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- END 2. ROW-->
+
+    <!-- START Footer-->
+
+    <div class="row container-fluid" style="margin-top:176px;width:101.5%">
+    <footer class="d-flex flex-wrap  align-items-center py-3 border-top">
+      <p class="col-md-4 mb-0 text-muted" style="margin-top:19px; margin-right:-96px; margin-left:263px;">© 2022 Company, Inc</p>
+  
+      <p style="font-size:40px; font-family: 'Great Vibes', cursive; margin-top:36px;"> SuperCar Dealership </p>
+  
+      <ul class="nav col-md-4 justify-content-end" style="margin-top:21px;">
+        <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">Home</a></li>
+        <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">Features</a></li>
+        <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">Pricing</a></li>
+        <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">FAQs</a></li>
+        <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">About</a></li>
+      </ul>
+    </footer>
+  </div>
+
+    <!-- END Footer-->
+
+
+    <!-- END main-->
+
+    
+
+    <script src="js/supercar.js" type="text/javascript"></script>
+   
+  </body>
+</html>
